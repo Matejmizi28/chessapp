@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Chess } from 'chess.js';
+// @ts-ignore
 import { Chessboard as ChessboardJS } from 'chessboardjs';
-import 'chessboardjs/www/css/chessboard-1.0.0.min.css';
+// import 'chessboardjs/www/css/chessboard-1.0.0.min.css';
 
 interface ChessboardProps {
   onMove?: (fen: string) => void;

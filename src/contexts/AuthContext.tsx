@@ -6,7 +6,8 @@ import {
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
-  User
+  User,
+  UserCredential
 } from 'firebase/auth';
 
 const firebaseConfig = {
@@ -24,8 +25,8 @@ const auth = getAuth(app);
 
 interface AuthContextType {
   currentUser: User | null;
-  signup: (email: string, password: string) => Promise<void>;
-  login: (email: string, password: string) => Promise<void>;
+  signup: (email: string, password: string) => Promise<UserCredential>;
+  login: (email: string, password: string) => Promise<UserCredential>;
   logout: () => Promise<void>;
 }
 
